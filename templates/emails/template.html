@@ -1,0 +1,773 @@
+<link rel="stylesheet" type="text/css" href="invoice.css">
+<!--  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet"> -->
+<style>
+/*body,
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font-family: arial;
+    margin: 0px;
+    padding: 0px;
+}*/
+
+.containerBox {
+    /*max-width: 900px; uncomment*/
+    margin: 0px auto;
+    border: 1px solid #000;
+    /* display: flex;
+    flex-direction: column;
+    min-height: 100vh;*/
+}
+
+.title1 {
+    text-align: center;
+    background: #037af4;
+    padding: 12px;
+    /* border: 1px solid #000;*/
+    color: #fff;
+    font-size: 23px;
+}
+
+.row2 {
+    width: 100%;
+}
+
+.firstcol {
+    width: 50%;
+    clear: both;
+    float: left;
+    padding-left: 29px;
+    margin: 0px;
+    font-size: 13px;
+    color: #666;
+}
+
+.secondcol {
+    /*width: 50%; uncomment
+    height: 191%;*/
+    float: left;
+    background: rgba(68, 68, 68, 0.1);
+    /* font-size: 16px; */
+    margin: 0px;
+    padding-left: 34px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: -3px;
+}
+
+.bill {
+    float: right;
+    padding-right: 101px;
+}
+
+.firstcol h3 {
+    color: #0070c0;
+    margin: 0px;
+    font-weight: 600;
+    font-size: 1.17em !important;
+}
+
+.right h3 {
+    color: #0070c0;
+    margin: 0px;
+    font-weight: 600;
+    font-size: 1.17em !important;
+}
+
+.details1 h3 {
+    color: #0070c0;
+    margin: 0px;
+    font-weight: 600;
+    font-size: 1.17em !important;
+    padding-left: 12px;
+}
+
+.rightcontent h3 {
+    color: #0070c0;
+    margin: 0px;
+    font-weight: 600;
+    font-size: 1.33em !important;
+}
+
+.header1 {
+    background: #037af4;
+    color: #fff;
+    clear: both;
+    font-size: 13px;
+    padding: 13px 0px 12px 34px;
+}
+
+table,
+td,
+th {
+    text-align: left;
+}
+
+.tabcontent {
+    color: #333;
+    margin-top: 6px;
+    margin-bottom: 4px;
+    padding-left: 44px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+td {
+    padding: 5px;
+}
+
+th {
+    color: #0070c0;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+td {
+    font-size: 12px;
+    font-weight: 400;
+    color: #000000;
+}
+
+.table2 {
+    color: #333;
+    margin-top: 8px;
+    /*  padding-left: 21px;*/
+}
+
+.rowdata {
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #d9d9d9;
+    padding-left: 21px;
+}
+
+.row1 {
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #d9d9d9;
+}
+
+.table1_data {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.right {
+    text-align: right;
+    padding-right: 14px;
+    color: #000000;
+    font-size: 12px;
+}
+
+.details1 {
+    float: left;
+    width: 56%;
+    /* height: 14%; */
+    margin-top: -11px;
+    font-size: 12px;
+    padding-left: 10px;
+    line-height: 14px;
+    clear: both;
+    /* margin-bottom: -35px;*/
+}
+
+.col1 {
+    width: 35%;
+    float: left;
+    color: #727376;
+    margin-top: 3px;
+}
+
+.col2 {
+    width: 58%;
+    float: left;
+    font-weight: 700;
+    color: #333;
+    margin-top: 3px;
+}
+
+.details1 p {
+    font-size: 13px;
+    line-height: 14px;
+    margin: 1em;
+}
+
+.details2 {
+    float: left;
+     /*width: 42%; uncomment after testing*/
+    /* height: 14%; */
+    font-size: 12px;
+    padding-left: 30px;
+    line-height: 14px;
+    margin-top: -22px;
+    /* margin-bottom: 16px; */
+    border-left: 1px solid #d9d9d9;
+}
+
+.details2 p {
+    font-size: 13px;
+    line-height: 14px;
+    margin: 1em;
+}
+
+.conditions {
+    margin-top: 0px;
+    margin-bottom: -15px;
+    padding-left: 21px;
+    font-size: 13px;
+    color: #727376;
+    /*letter-spacing: 1px;
+    line-height: 22px;*/
+}
+
+.conditions h3 {
+    color: #0070c0;
+    margin-top: -13px;
+}
+
+.below_content {
+    width: 56%;
+    padding-left: 11px;
+    float: left;
+    font-size: 12px;
+    line-height: 9px;
+    margin-top: -23px;
+}
+
+.bcol1 {
+    width: 50%;
+    color: #727376;
+    float: left;
+    font-weight: 600;
+}
+
+.bcol2 {
+    width: 50%;
+    color: #0070c0;
+    float: left;
+    font-weight: 600;
+}
+
+.below_content2 {
+   
+    color: #000000;
+    float: right;
+   
+
+}
+
+.linedata {
+    font-size: 13px;
+    /* color: #727376; */
+    padding-left: 41px;
+    /* margin-top: -12px; */
+    padding-bottom: 8px;
+}
+
+.belowvertical_line {
+    border-left: 2px solid #d9d9d9;
+    height: 31px;
+}
+
+.image {
+    padding-left: 2px;
+}
+
+.tdata {
+    text-align: center;
+}
+
+.leftContent {
+    color: #727376;
+   font-size: 13px;
+    padding-top: 6px;
+    word-wrap: break-word;
+}
+
+.leftContent span {
+    line-height: 1.5em;
+    font-size: 15px;
+}
+
+.leftContent p {
+    font-size: 15px !important;
+    margin-top: 5px;
+    margin-bottom: -5px;
+}
+
+.rightcontent {
+    padding-left: 0px;
+    font-size: 13px;
+    margin-top: 2px;
+    width: 88%;
+}
+
+.enlarge span {
+    padding-left: 2px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.bcol1 p {
+    font-size: 13px;
+    margin: 1em;
+    font-weight: 600;
+}
+
+.bcol2 p {
+    font-size: 13px;
+    margin: 1em;
+    font-weight: 600;
+}
+
+.below_content2 p {
+    font-size: 12px;
+    margin: 1em;
+    font-weight: 600;
+    padding-top: 22px;
+    margin-bottom: 4px;
+}
+
+
+/*@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+    }
+}*/
+
+.fullAddress {
+    margin-left: -32px;
+    margin-top: -6px;
+    line-height: 21px;
+    width: 361px;
+    font-size: 13px;
+}
+
+.fullAddress div.first {
+    width: 13.3%;
+    float: left;
+    padding-left: 15px;
+}
+
+
+/* .fullAddress .contact1 {
+        width: 91.2%;
+    }
+    
+    .fullAddress .contact2 {
+        width: 91.2%;
+    }
+    */
+
+p.enlarge {
+    font-size: 96%;
+}
+
+@media (max-width:800px) {
+    .firstcol {
+        width: 100% !important;
+    }
+    .secondcol {
+        width: 100% !important;
+        height: auto;
+    }
+    .leftContent {
+        padding-bottom: 24px;
+    }
+    .rightcontent {
+        width: auto;
+    }
+    .tabcontent {
+        width: 95%;
+        overflow-y: auto;
+        padding-left: 12px;
+    }
+    .table2 {
+        width: 95%;
+        overflow-y: auto;
+    }
+    .details1 {
+        height: auto;
+        padding-left: 25px;
+    }
+    .details2 {
+        height: auto;
+        padding-left: 25px;
+    }
+    .below_content {
+        height: auto;
+    }
+    .below_content2 {
+        height: auto;
+    }
+}
+
+@media print {
+    body {
+        -webkit-print-color-adjust: exact;
+    }
+    .title1 {
+        background: #037af4 !important;
+    }
+    .title1 span {
+        color: #fff !important;
+    }
+    .containerBox {
+        border: 1px solid #000;
+        min-height: 97vh !important;
+        font-weight: 400 !important;
+    }
+    .firstcol {
+        width: 50% !important;
+        clear: both;
+        float: left;
+        padding-left: 26px;
+        margin: 0px;
+        font-size: 13px;
+        color: #666;
+    }
+    .firstcol p {
+        color: #96989A!important;
+    }
+    .firstcol h3 {
+        color: #0070c0 !important;
+    }
+    .leftcontent {
+        color: #727376 !important;
+    }
+    .leftaddress {
+        color: #727376 !important;
+        font-weight: 300px !important;
+    }
+    .secondcol {
+        width: 50% !important;
+        float: left;
+        background: rgba(68, 68, 68, 0.1) !important;
+        font-size: 13px;
+        margin: 0px;
+        padding-left: 30px !important;
+        font-weight: 600;
+        color: #000000;
+        line-height: 20px !important;
+        height: 209px;
+        margin-bottom: -3px !important;
+    }
+    .rightcontent h3 {
+        color: #0070c0 !important;
+    }
+    .header1 {
+        font-size: 13px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background: #037af4 !important;
+        color: red !important;
+    }
+    .header1 span {
+        color: #fff !important;
+    }
+    .tabcontent {
+        font-size: 12px;
+        padding-left: 30px;
+    }
+    .tabcontent th span {
+        color: #0070c0 !important;
+    }
+    .table2 th span {
+        color: #0070c0 !important;
+    }
+    .table1_data {
+        font-size: 14px;
+    }
+    .table2 {
+        /* width:99%;*/
+        width: 790px;
+        overflow: hidden;
+        border-left: 0px solid !important;
+        border-right: 0px solid !important;
+    }
+    .table2 tbody {
+        line-height: 12px !important;
+    }
+    .table2 thead h3 {
+        color: #0070c0 !important;
+    }
+    .table2 td h3 {
+        color: #0070c0 !important;
+    }
+    .table2 td {
+        color: #000000 !important;
+    }
+    .table2 ul li span {
+        color: #96989A !important;
+    }
+    .linedata span {
+        color: #0070c0 !important;
+    }
+    .right h3 {
+        color: #0070c0 !important;
+    }
+    .details1 {
+        width: 57% !important;
+        font-size: 11px;
+        line-height: 10px !important;
+        padding-left: 10px;
+    }
+    .details1 h3 {
+        color: #0070c0 !important;
+    }
+    .details1 .col1 p {
+        color: #727376 !important;
+    }
+    .details2 {
+        line-height: 10px !important;
+        width: 43% !important;
+    }
+    .details2 .col1 p {
+        color: #727376 !important;
+    }
+    .conditions {
+        margin-bottom: -12px;
+    }
+    .conditions h3 {
+        color: #0070c0 !important;
+    }
+    .conditions ol li {
+        color: #727376 !important;
+    }
+    .conditions ol li span {
+        color: #727376 !important;
+    }
+    .below_content .bcol1 p {
+        color: #727376 !important;
+    }
+    .below_content .bcol2 p {
+        color: #0070c0 !important;
+    }
+    .below_content2 p {
+        /*margin-top: -10px !important;
+        margin-bottom: -25px;*/
+        font-size: 10px !important;
+    }
+}
+</style>
+<div class="containerBox">
+    <div class="title1">
+        <span>INVOICE</span>
+    </div>
+    <div class="row2">
+        <div class="firstcol">
+            <p style="font-weight:600;color: #96989A;font-size: 17px;margin-bottom:5px;">Invoice To</p>
+            {{#each customer}}<h3>{{custName}}</h3>
+            <div class="leftContent" style="color: #727376 !important;">
+                <span class="leftaddress">{{address1}} {{address2}}
+                </span>
+                <p>{{city}}</p>
+                <p>{{state}}</p>
+                <p>{{pinCode}}</p>
+              
+            </div>{{/each}}
+        </div>
+        <div class="col secondcol">
+            <img src="Metronet logo.png" style="width:39%;padding-left: 17px;" />
+            <div class="rightcontent">
+            {{#each tenant}}
+                <h3 style="padding-left: 17px;margin-bottom: 4px;" >{{name}}</h3>
+                <div class="fullAddress">
+                    <div class="contact1 first">
+                        <img src="address.png" style="width:26px;" />
+                    </div>
+                    <div class="contact1">
+                        <p class="enlarge">
+                            <span >{{address}}</span>
+                        </p>
+                    </div>
+                    <div class="contact2 first" style="margin-top:-8px;">
+                        <img src="phone.png" style="width:19px;padding-left:3px;" />
+                    </div>
+                    <div class="contact2">
+                        <p class="enlarge" style="margin-top:-8px;">
+                            <span >{{phone}}</span>
+                        </p>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    <div class="header1">
+        
+        {{#each customer}}<span class="bill" style="margin-top: -9px;">Bill Frequency :{{billingType}}</span>{{/each}}
+    </div>
+    <div class="tabcontent">
+        <table style="text-align: left;">
+            <thead>
+                <tr>
+                    <th><span>Invoice #</span></th>
+                    <th><span>Invoice Date</span></th>
+                    <!--  <th><span>Subscribed B/W*</span></th> -->
+                    <th><span>Payable</span></th>
+                    <th><span>Due Date</span></th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each invoice}}
+                <tr>
+                    <td class="table1_data">{{invoiceId}}</td>
+                    <td class="table1_data">{{invoiceDate }}</td>
+                    <!--  <td class="table1_data">15 Mbps**</td> -->
+                    <td class="table1_data">{{total}}</td>
+                    <td class="table1_data">{{dueDate}}</td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+     <div class="header1">
+        {{#each customer}}<span>Customer Code : {{cId}}</span>{{/each}}
+    </div>
+     <div class="table2">
+        <table>
+            <thead>
+                <tr>
+                    <th class="tdata"><span>SL.No</span></th>
+                    <th class="tdata"><span>Particulars</span></th>
+                    <th class="tdata"><span>Invoice Period</span></th>
+                    <th class="tdata"><span>Amount</span></th>
+                </tr>
+            </thead>
+            <tbody style="line-height:14px;">
+            {{#each lineitems}}
+                <tr >
+                    <td class="row1" style="text-align: center;border-left:0px;">{{ @index}}</td>
+                    <td class="rowdata" style="text-align: left;">{{itemType}}</td>
+                    <td class="rowdata" style="text-align: left;">
+                        <div style="width:50%;float: left;">
+                             <ul style="list-style: none;padding-left: 0;">
+                             <li style="font-size:14px;color:#96989A;padding-bottom:5px;font-weight: 300;margin-top: 3px;text-align:left;padding-left:0px;"><span>From</span></li>
+                               <li style="font-weight:400;">{{periodFrom}}</li>
+                            </ul>
+                        </div>
+                        <div style="width:50%;float: left;">
+                            <ul style="list-style: none;padding-left: 0;">
+                                <li class="head" style="font-size:14px;color:#96989A;padding-bottom:5px;font-weight: 300;margin-top: 3px;text-align:left;padding-left:0px;"><span>To</span></li>
+                            <li style="font-weight:400;">{{periodTo }}</li>
+                            </ul>
+                        </div>
+                    </td>
+                    <td class="rowdata" style="text-align: right;padding-right:70px;border-right:0px;">{{netAmount}}</td>
+                </tr>
+                {{/each}}
+                {{#each tax }}
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="right" style="font-weight:400px;">{{itemType}}</td>
+                    <td style="text-align:right;padding-right:70px;">{{grossAmount}}</td>
+                </tr>
+                {{/each}}
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="right" style="font-weight:400px;">Previous Balance</td>
+                    <td style="text-align:right;padding-right:70px;">0.00</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <!-- <td class="right" style="font-weight:400px;">Discount</td>
+                    <td style="text-align:right;padding-right:70px;"></td> -->
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <!-- <td class="right" style="font-weight:400px;">Round Off</td>
+                    <td style="text-align:right;padding-right:70px;">0.06</td> -->
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td class="right">
+                        <h3>Net Payable Amount</h3></td>
+                    {{#each invoice}}<td style="text-align:right;padding-right:70px; color: #0070c0 !important;margin: 0px;font-weight: 600;">
+                        <h3 style="font-size:1.1em !important;font-weight:500;"><i style="padding-right: 5px;font-size: 11px;" class="fa fa-rupee"></i>{{total}}</h3></td>{{/each}}
+                </tr>
+              
+            </tbody>
+        </table>
+        <span ng-model="vm.amount" style="display:none"></span>
+          <div class="linedata">
+            In Words :<span style="padding-left:2px;color: #0070c0;font-weight:600;">{{words}}</span><span style="font-weight:600;color: #0070c0;">Rupees Only.</span>
+        </div>
+    </div>
+    <hr style="width:100%;margin-top:6px !important;">
+    <div class="row2">
+        <div class="details1 ">
+            <h3 ng-bind="vm.tenant.name"></h3>
+            <div class="col1">
+                <p>PAN Number</p>
+                <p> Tax Category</p>
+                <p>GST No.</p>
+                <p>SAC Code</p>
+                <p>SA Code</p>
+                <p>HSN Code</p>
+            </div>
+            <div class="col2">
+               {{#each tenant}} <p>{{panNo}}</p>
+                <p>{{serviceTaxCategory}}</p>
+                <p>{{serviceTaxNumber}}</p>
+                <p>{{vatTinNumber}}</p>
+                <p>{{sacode}}</p>
+                <p>{{hsncode}}</p>
+                {{/each}}
+            </div>
+        </div>
+        <div class="details2">
+            <div class="col1">
+                <p>Bank Name</p>
+                <p>Account #</p>
+                <p>Account Type</p>
+                <p>IFSC Code</p>
+                <p>Bank Branch</p>
+            </div>
+            <div class="col2">
+                {{#each tenant}}  <p>{{bankName}}</p>
+                <p>{{accountNo}}</p>
+                <p>{{accountType}}</p>
+                <p>{{ifsc}}</p>
+                <p>{{bankBranch}}</p>{{/each}}
+            </div>
+        </div>
+    </div>
+    <hr style="clear:both;width:100%;">
+    <div class="conditions">
+        <h3 style="padding-left:0px;">Terms & Conditions</h3>
+        <ol style="font-size: 12px;margin-top: 5px;line-height: 1.5em;">
+          {{#each tenant}}  <li>{{termsCondition}}</li>
+            <li>{{termsCondition1}}</li>
+            <li>{{termsCondition2}}</li>
+            <li>{{termsCondition3}}</li>
+            <li>{{termsCondition4}}</li>
+            <li>{{termsCondition5}}</li>
+            <li>{{termsCondition6}}</li>{{/each}}
+        </ol>
+    </div>
+    <hr style="clear:both;width:100%;">
+    <div class="row2">
+        
+        <div class="below_content2">
+            <p>This is computer generated and no signature is required.</p>
+        </div>
+    </div>

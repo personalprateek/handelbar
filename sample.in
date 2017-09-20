@@ -1,0 +1,15 @@
+"customer_invoices":
+    {
+      "id": "bigint(20)",
+      "customer_id": "bigint(20)",
+      "client_id": "bigint(20)",
+      "order_id": "bigint(20)",
+      "invoice_number": "string",
+      "total_amount": "double",
+      "payable_amount" : "double",
+      "status": "integer",
+      "created_at": "datetime",
+      "updated_at": "datetime",
+      "created_by": "bigint(20)",
+      "updated_by": "bigint(20)"
+    }

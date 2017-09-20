@@ -1,0 +1,24 @@
+{
+  "name": "handlebarapp",
+  "version": "1.0.0",
+  "description": "to show use of handlebar and mail sender",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "prateek",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "botbuilder": "^3.9.1",
+    "bunyan": "^1.8.10",
+    "edi": "^1.1.0",
+    "handlebars": "^4.0.10",
+    "html-pdf": "^2.1.0",
+    "lodash": "^4.17.4",
+    "mime-types": "^2.1.15",
+    "nodemailer": "^4.0.1",
+    "nodemailer-ses-transport": "^1.5.1",
+    "restify": "^5.2.0"
+  }
+}
